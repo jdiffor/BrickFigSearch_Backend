@@ -1,1 +1,1 @@
-web: brickFigSearchBackend.py 
+web: python3 brickFigSearchBackend.py 
