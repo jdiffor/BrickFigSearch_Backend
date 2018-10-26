@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import urllib
 import urllib.request as ur
 from bs4 import BeautifulSoup as BS
+import os
 #import config
 
 brickset_base_url = 'http://brickset.com/api/v2.asmx/getSets?apiKey=TOAZ-NCTf-LK5p&userHash=&theme=&subtheme=&setNumber=&year=&owned=&wanted=&orderBy=&pageSize=&pageNumber=&userName=&query='
