@@ -27,7 +27,7 @@ def search_for_set(query):
 	res = ur.urlopen(req)
 	html = res.read()
 	res.close()
-	soup = BS(html, "xml")
+	soup = BS(html, "html.parser")
 	sets = soup.find_all('sets')
 	results = []
 	for this_set in sets:
