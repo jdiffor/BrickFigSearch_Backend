@@ -10,7 +10,6 @@ bricklink_base_url = 'https://www.bricklink.com/catalogItemInv.asp?S='
 bricklink_extension_url = '-1&viewItemType=M'
 bricklink_image_base_url = 'https://www.bricklink.com/ML/'
 bricklink_price_url = 'https://www.bricklink.com/catalogPG.asp?M='
-brickset_url = 'http://brickset.com/api/v2.asmx/getSets?apiKey=TOAZ-NCTf-LK5p&userHash=&theme=&subtheme=&setNumber=&year=&owned=&wanted=&orderBy=&pageSize=&pageNumber=&userName=&query='
 jpg = '.jpg'
 
 hdr = {'User-Agent': 'Chrome/23.0.1271.65 Safari/537.11',
@@ -23,7 +22,7 @@ hdr = {'User-Agent': 'Chrome/23.0.1271.65 Safari/537.11',
 app = Flask(__name__)
 
 def search_for_set(query):
-	search_url = brickset_url + query
+	search_url = brickset_base_url + query
 	req = ur.Request(search_url, headers=hdr)
 	res = ur.urlopen(req)
 	html = res.read()
