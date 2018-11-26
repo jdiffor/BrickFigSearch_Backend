@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup as BS
 import os
 #import config
 
-brickset_base_url = 'http://brickset.com/api/v2.asmx/getSets?apiKey=TOAZ-NCTf-LK5p&userHash=&theme=&subtheme=&setNumber=&year=&owned=&wanted=&orderBy=&pageSize=&pageNumber=&userName=&query='
+brickset_base_url = 'http://brickset.com/api/v2.asmx/getSets?apiKey=' + API_KEY + '&userHash=&theme=&subtheme=&setNumber=&year=&owned=&wanted=&orderBy=&pageSize=&pageNumber=&userName=&query='
 bricklink_base_url = 'https://www.bricklink.com/catalogItemInv.asp?S='
 bricklink_extension_url = '-1&viewItemType=M'
 bricklink_image_base_url = 'https://www.bricklink.com/ML/'
