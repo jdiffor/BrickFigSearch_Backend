@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS, cross_origin
 import urllib
 import urllib.request as ur
 from bs4 import BeautifulSoup as BS
@@ -20,6 +21,9 @@ hdr = {'User-Agent': 'Chrome/23.0.1271.65 Safari/537.11',
        'Connection': 'keep-alive'}
 
 app = Flask(__name__)
+
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 def search_for_set(query):
 	search_url = brickset_base_url + query
@@ -87,6 +91,7 @@ def get_fig_price(fig_code):
 
 # root
 @app.route("/")
+@cross_origin()
 def index():
 	"""
 	this is a root dir of my server
@@ -96,6 +101,7 @@ def index():
 
 # GET
 @app.route('/sets/<number>')
+@cross_origin()
 def get_set_data_endpoint(number):
 	"""
 	output minifig codes for a set identified by number
@@ -106,6 +112,7 @@ def get_set_data_endpoint(number):
 
 # GET
 @app.route('/search/<query>')
+@cross_origin()
 def get_search_results_endpoint(query):
 	"""
 	output results for a given search query
