@@ -1,6 +1,6 @@
 beautifulsoup4==4.6.0
 Flask==0.12.2
-Flask-Cors==3.0.7
+Flask-Cors==3.0.9
 gunicorn==19.9.0
 itsdangerous==0.24
 oauthlib==2.1.0
